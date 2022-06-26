@@ -6,10 +6,9 @@ import Container from 'components/Layout/Container'
 import { PageMeta } from 'components/Layout/Page'
 import { useTranslation } from 'contexts/Localization'
 import Hero from './components/Hero'
-import { swapSectionData} from './components/SalesSection/data'
+import { swapSectionData } from './components/SalesSection/data'
 import MetricsSection from './components/MetricsSection'
 import SalesSection from './components/SalesSection'
-import Feature from './components/Features/src/pages/home'
 import WinSection from './components/WinSection'
 import FarmsPoolsRow from './components/FarmsPoolsRow'
 import Footer from './components/Footer'
@@ -80,7 +79,6 @@ const Home: React.FC = () => {
         index={2}
         hasCurvedDivider={false}
       >
-        
         <MetricsSection />
       </PageSection>
       <PageSection
