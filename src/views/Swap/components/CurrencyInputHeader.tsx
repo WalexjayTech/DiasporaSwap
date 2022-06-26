@@ -27,7 +27,6 @@ interface Props {
 
 const CurrencyInputContainer = styled(Flex)`
   flex-direction: column;
-  align-items: center;
   padding: 24px;
   width: 100%;
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
@@ -54,12 +53,7 @@ const CurrencyInputHeader: React.FC<Props> = ({
   return (
     <CurrencyInputContainer>
       <Flex width="100%" alignItems="center" justifyContent="space-between">
-        {setIsChartDisplayed && (
-          <ColoredIconButton onClick={toggleChartDisplayed} variant="text" scale="sm">
-            {isChartDisplayed ? <ChartDisableIcon color="textSubtle" /> : <ChartIcon width="24px" color="textSubtle" />}
-          </ColoredIconButton>
-        )}
-        <Flex flexDirection="column" alignItems="flex-end" width="100%" mr={18}>
+        <Flex flexDirection="column" width="100%" mr={18}>
           <Heading as="h2">{title}</Heading>
         </Flex>
         <Flex>
@@ -68,9 +62,6 @@ const CurrencyInputHeader: React.FC<Props> = ({
           </NotificationDot>
           <IconButton onClick={onPresentTransactionsModal} variant="text" scale="sm">
             <HistoryIcon color="textSubtle" width="24px" />
-          </IconButton>
-          <IconButton variant="text" scale="sm" onClick={() => onRefreshPrice()}>
-            <RefreshIcon disabled={!hasAmount} color="textSubtle" width="27px" />
           </IconButton>
         </Flex>
       </Flex>

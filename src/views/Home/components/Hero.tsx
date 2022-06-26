@@ -6,10 +6,11 @@ import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import Image from 'next/image'
 import styled, { keyframes } from 'styled-components'
-import bunnyImage from '../../../../public/images/home/lunar-bunny/bunny@2x.png'
+import bunnyImage from '../../../../public/images/home/lunar-bunny/map.png'
 import CompositeImage, { CompositeImageProps } from './CompositeImage'
 import { SlideSvgDark, SlideSvgLight } from './SlideSvg'
 
+  
 const flyingAnim = () => keyframes`
   from {
     transform: translate(0,  0px);
@@ -58,7 +59,6 @@ const BunnyWrapper = styled.div`
     overflow: visible !important; // make sure the next-image pre-build blur image not be cropped
   }
 `
-
 const StarsWrapper = styled.div`
   position: absolute;
   top: 0;
@@ -80,14 +80,14 @@ const StarsWrapper = styled.div`
   }
 `
 
-const starsImage: CompositeImageProps = {
-  path: '/images/home/lunar-bunny/',
-  attributes: [
-    { src: 'star-l', alt: '3D Star' },
-    { src: 'star-r', alt: '3D Star' },
-    { src: 'star-top-r', alt: '3D Star' },
-  ],
-}
+// const starsImage: CompositeImageProps = {
+//   path: '/images/home/lunar-bunny/',
+//   attributes: [
+//     { src: 'star-l', alt: '3D Star' },
+//     { src: 'star-r', alt: '3D Star' },
+//     { src: 'star-top-r', alt: '3D Star' },
+//   ],
+// }
 
 const Hero = () => {
   const { t } = useTranslation()
@@ -108,16 +108,16 @@ const Hero = () => {
         id="homepage-hero"
       >
         <Flex flex="1" flexDirection="column">
-          <Heading scale="xxl" color="secondary" mb="24px">
-            {t('The moon is made of pancakes.')}
+          <Heading scale="xxl" color="secondary" mb="24px" >
+            {t('The Beauty of Africa')}
           </Heading>
           <Heading scale="md" mb="24px">
-            {t('Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.')}
+            {t('Swap, earn, and build on the african-style decentralized platform.')}
           </Heading>
           <Flex>
-            {!account && <ConnectWalletButton mr="8px" />}
-            <NextLinkFromReactRouter to="/swap">
-              <Button variant={!account ? 'secondary' : 'primary'}>{t('Trade Now')}</Button>
+            {!account && <ConnectWalletButton mr="8px" style={{backgroundColor: "#FCBC03" , color: "#351A47" , border: "3px solid #FCBC03", margin: "0 20px 0 0" , boxShadow: "none"}}/>}
+            <NextLinkFromReactRouter to="#">
+              <Button variant={!account ? 'secondary' : 'primary'} style={{padding: "30px 40px 30px 40px"}}>{t('Learn More')}</Button>
             </NextLinkFromReactRouter>
           </Flex>
         </Flex>
@@ -127,13 +127,10 @@ const Hero = () => {
           flex={[null, null, null, '1']}
           mb={['24px', null, null, '0']}
           position="relative"
-        >
+        > 
           <BunnyWrapper>
             <Image src={bunnyImage} priority placeholder="blur" alt={t('Lunar bunny')} />
           </BunnyWrapper>
-          <StarsWrapper>
-            <CompositeImage {...starsImage} />
-          </StarsWrapper>
         </Flex>
       </Flex>
     </>

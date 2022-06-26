@@ -209,7 +209,7 @@ const BattleCta: React.FC<CompetitionProps> = ({
                   scale="sm"
                   variant="secondary"
                   onClick={() => {
-                    window.open('https://twitter.com/pancakeswap')
+                    window.open('https://twitter.com/marshallcowell/status/1486137494131326978?s=21&t=gX2eGWHwAEKSZLI66odxvw')
                   }}
                 >
                   <TwitterIcon color="textSubtle" fontSize="12px" mr="5px" />

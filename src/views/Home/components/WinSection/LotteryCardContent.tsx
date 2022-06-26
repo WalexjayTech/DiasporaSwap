@@ -77,16 +77,15 @@ const LotteryCardContent = () => {
           {prizesThisRound}
         </Text>
         <Text color="white" mb="40px">
-          {t('Buy tickets with CAKE, win CAKE if your numbers match')}
+          {t('Will BNB price rise or fall? guess correctly 1')}
         </Text>
       </Flex>
       <Flex alignItems="center" justifyContent="center">
         <StyledLink to="/lottery" id="homepage-prediction-cta">
           <Button width="100%">
             <Text bold color="invertedContrast">
-              {t('Buy Tickets')}
+              {t('Start')}
             </Text>
-            <ArrowForwardIcon ml="4px" color="invertedContrast" />
           </Button>
         </StyledLink>
       </Flex>

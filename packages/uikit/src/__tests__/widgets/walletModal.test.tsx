@@ -284,7 +284,7 @@ it("renders ConnectModal correctly", () => {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      background: linear-gradient(139.73deg,#E5FDFF 0%,#F3EFFF 100%);
+      background: linear-gradient(139.73deg,#FAF3FF 0%,#F3EFFF 100%);
       border-bottom: 1px solid #E7E3EB;
       display: -webkit-box;
       display: -webkit-flex;
@@ -655,7 +655,7 @@ it("renders ConnectModal correctly", () => {
             </p>
             <a
               class="c22"
-              href="https://docs.pancakeswap.finance/get-started/connection-guide"
+              href="#"
               rel="noreferrer noopener"
               scale="md"
               target="_blank"

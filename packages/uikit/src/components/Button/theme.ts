@@ -3,16 +3,17 @@ import { scales, variants } from "./types";
 export const scaleVariants = {
   [scales.MD]: {
     height: "48px",
-    padding: "0 24px",
+    padding: "30px 30px",
   },
   [scales.SM]: {
     height: "32px",
-    padding: "0 16px",
+    padding: "20px 20px",
   },
   [scales.XS]: {
     height: "20px",
-    fontSize: "12px",
-    padding: "0 8px",
+    fontSize: "14px",
+    padding: "12px 12px",
+
   },
 };
 
@@ -23,7 +24,7 @@ export const styleVariants = {
   },
   [variants.SECONDARY]: {
     backgroundColor: "transparent",
-    border: "2px solid",
+    border: "3px solid",
     borderColor: "primary",
     boxShadow: "none",
     color: "primary",
