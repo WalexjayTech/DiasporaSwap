@@ -1,7 +1,7 @@
 import {
   MenuItemsType,
   DropdownMenuItemType,
-  SwapIcon,
+  ExchangeIcon,
   SwapFillIcon,
   EarnFillIcon,
   EarnIcon,
@@ -24,7 +24,7 @@ export type ConfigMenuItemsType = Omit<MenuItemsType, 'items'> & { hideSubNav?: 
 const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType[] = (t, languageCode) => [
   {
     label: t('Trade'),
-    icon: SwapIcon,
+    icon: ExchangeIcon,
     fillIcon: SwapFillIcon,
     href: '/swap',
     showItemsOnMobile: false,
@@ -37,7 +37,6 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
         label: t('Liquidity'),
         href: '/liquidity',
       },
-  
     ],
   },
   {
@@ -71,7 +70,6 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
         label: t('Pools'),
         href: '#',
       },
-     
     ],
   },
   {
@@ -112,7 +110,6 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
         label: t('WhitePaper'),
         href: '#',
       },
-    
     ],
   },
 ]
