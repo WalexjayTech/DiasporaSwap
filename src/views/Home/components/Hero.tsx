@@ -10,7 +10,6 @@ import bunnyImage from '../../../../public/images/home/lunar-bunny/map.png'
 import CompositeImage, { CompositeImageProps } from './CompositeImage'
 import { SlideSvgDark, SlideSvgLight } from './SlideSvg'
 
-  
 const flyingAnim = () => keyframes`
   from {
     transform: translate(0,  0px);
@@ -108,16 +107,29 @@ const Hero = () => {
         id="homepage-hero"
       >
         <Flex flex="1" flexDirection="column">
-          <Heading scale="xxl" color="secondary" mb="24px" >
+          <Heading scale="xxl" color="secondary" mb="24px">
             {t('The Beauty of Africa')}
           </Heading>
           <Heading scale="md" mb="24px">
-            {t('Swap, earn, and build on the african-style decentralized platform.')}
+            {t('Swap, Earn, and Build on the African Diaspora-Style Decentralized Platform')}
           </Heading>
           <Flex>
-            {!account && <ConnectWalletButton mr="8px" style={{backgroundColor: "#FCBC03" , color: "#351A47" , border: "3px solid #FCBC03", margin: "0 20px 0 0" , boxShadow: "none"}}/>}
+            {!account && (
+              <ConnectWalletButton
+                mr="8px"
+                style={{
+                  backgroundColor: '#FCBC03',
+                  color: '#351A47',
+                  border: '3px solid #FCBC03',
+                  margin: '0 20px 0 0',
+                  boxShadow: 'none',
+                }}
+              />
+            )}
             <NextLinkFromReactRouter to="#">
-              <Button variant={!account ? 'secondary' : 'primary'} style={{padding: "30px 40px 30px 40px"}}>{t('Learn More')}</Button>
+              <Button variant={!account ? 'secondary' : 'primary'} style={{ padding: '30px 40px 30px 40px' }}>
+                {t('Learn More')}
+              </Button>
             </NextLinkFromReactRouter>
           </Flex>
         </Flex>
@@ -127,7 +139,7 @@ const Hero = () => {
           flex={[null, null, null, '1']}
           mb={['24px', null, null, '0']}
           position="relative"
-        > 
+        >
           <BunnyWrapper>
             <Image src={bunnyImage} priority placeholder="blur" alt={t('Lunar bunny')} />
           </BunnyWrapper>

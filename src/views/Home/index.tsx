@@ -7,8 +7,10 @@ import { PageMeta } from 'components/Layout/Page'
 import { useTranslation } from 'contexts/Localization'
 import Hero from './components/Hero'
 import { swapSectionData } from './components/SalesSection/data'
+import { swapSectionData2 } from './components/SaleSection2/data'
 import MetricsSection from './components/MetricsSection'
 import SalesSection from './components/SalesSection'
+import SalesSection2 from './components/SaleSection2'
 import WinSection from './components/WinSection'
 import FarmsPoolsRow from './components/FarmsPoolsRow'
 import Footer from './components/Footer'
@@ -88,6 +90,18 @@ const Home: React.FC = () => {
         hasCurvedDivider={false}
       >
         <SalesSection {...swapSectionData(t)} />
+      </PageSection>
+      <PageSection
+        innerProps={{ style: { margin: '0', width: '100%' } }}
+        background={
+          theme.isDark
+            ? 'linear-gradient(180deg, #09070C 22%, #201335 100%)'
+            : 'linear-gradient(180deg, #FFFFFF 22%, #F8EDFF 100%)'
+        }
+        index={2}
+        hasCurvedDivider={false}
+      >
+        <SalesSection2 {...swapSectionData2(t)} />
       </PageSection>
     </>
   )

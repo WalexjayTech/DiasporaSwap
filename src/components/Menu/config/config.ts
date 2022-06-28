@@ -97,7 +97,7 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
     ],
   },
   {
-    label: 'About',
+    label: 'More',
     href: '#',
     icon: MoreIcon,
     hideSubNav: true,
@@ -108,6 +108,14 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
       },
       {
         label: t('WhitePaper'),
+        href: '#',
+      },
+      {
+        label: t('Referral'),
+        href: '#',
+      },
+      {
+        label: t('CashApp'),
         href: '#',
       },
     ],

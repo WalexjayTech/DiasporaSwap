@@ -2,7 +2,7 @@ import { TranslateFunction } from 'contexts/Localization/types'
 import { SalesSectionProps } from '.'
 
 export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
-  headingText: t('Trade anything. No registration, no hassle.'),
+  headingText: t('Trade AFD with any coin. No hassle.'),
   bodyText: t('Connect your wallet and start trading in no time.'),
   reverse: true,
   primaryButton: {
@@ -16,11 +16,7 @@ export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
     external: true,
   },
   images: {
-    path: '/images/home/trade/',
-    attributes: [
-      { src: 'BNB', alt: t('BNB token') },
-      { src: 'BTC', alt: t('BTC token') },
-      { src: 'CAKE', alt: t('CAKE token') },
-    ],
+    path: '/images/home/afd/',
+    attributes: [{ src: 'AFD', alt: t('AFD token') }],
   },
 })
